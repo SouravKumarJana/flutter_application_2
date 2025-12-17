@@ -1,27 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/Widgets/screen1.dart';
+import 'package:flutter_application_2/Widgets/secondScreen.dart';
 
 class BarElememt extends StatelessWidget{
-  final String name;
+  final String? name;
   final Icon icon;
   final TextStyle textStyle;
   final VoidCallback callback;
 
   const BarElememt({super.key, 
-  required this.name, 
+  this.name, 
   required this.icon, 
   required this.textStyle, 
   required this.callback
 });
 
+
+
 @override
   Widget build(BuildContext context) {
+    
     return InkWell(
         onTap: callback,
         child: Column(
             children: [
                 icon,
                 const SizedBox(height: 6),
-                Text(name, style: textStyle),
+                if(name!= null )...[
+                  Text(name!, style: textStyle),
+                ]
             ],
         ),
     );
