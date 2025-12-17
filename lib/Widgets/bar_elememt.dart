@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/Widgets/screen1.dart';
-import 'package:flutter_application_2/Widgets/secondScreen.dart';
 
 class BarElememt extends StatelessWidget{
   final String? name;

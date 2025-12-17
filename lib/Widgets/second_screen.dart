@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class Secondscreen extends StatefulWidget {
-  const Secondscreen({super.key, required this.title});
+class SecondScreen extends StatefulWidget {
+  const SecondScreen({super.key, required this.title});
 
   final String title;
 
   @override
-  State<Secondscreen> createState() => _SecondScreenState();
+  State<SecondScreen> createState() => _SecondScreenState();
 }
 
-class _SecondScreenState extends State<Secondscreen> {
+class _SecondScreenState extends State<SecondScreen> {
   int counter = 0;
 
   void incrementCounter() {

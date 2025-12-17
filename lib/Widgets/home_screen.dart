@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'firstscreen.dart';
+import 'second_screen.dart';
 import 'bar_stack.dart';
-import 'screen1.dart';
-import 'secondScreen.dart';
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -11,26 +10,26 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int currentIndex = 0;
+  int current_index = 0;
 
-  final List<Widget> screen = const [
-    MyHomeScreen1(),
-    Secondscreen(title: 'Dynamic Screen'),
-    MyHomeScreen1(),
-    MyHomeScreen1(),
-    MyHomeScreen1(),
+  final List<Widget> screen = [
+    FirstScreen(),
+    SecondScreen(title: 'Dynamic Screen'),
+    FirstScreen(),
+    FirstScreen(),
+    FirstScreen()
   ];
 
-  void updateIndex(int index) {
+  void onTabChanged(int index) {
     setState(() {
-      currentIndex = index;
+      current_index = index;
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: screen[currentIndex],
+      body: screen[current_index],
       bottomNavigationBar: Container(
         padding: const EdgeInsets.all(6),
         height: 70,
@@ -40,39 +39,8 @@ class _HomeScreenState extends State<HomeScreen> {
             BoxShadow(color: Colors.grey, blurRadius: 15),
           ],
         ),
-        child: BarStack(onIndexChanged: updateIndex),
+        child: BarStack(onIndexChanged: onTabChanged),
       ),
     );
   }
 }
-
-
-// class HomeScreen extends StatelessWidget{
-//   const HomeScreen({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       backgroundColor: Colors.white,
-//       appBar: AppBar(title: Text('Home Screen'), centerTitle: true,),
-//       bottomNavigationBar: Container(
-//         padding: EdgeInsets.all(6),
-//         width: double.infinity,
-//         height: 70,
-//         decoration: BoxDecoration(
-//           color: Colors.white,
-//           boxShadow: [
-//             BoxShadow(
-//               color: Colors.grey,
-//               blurRadius: 15
-//             )
-//           ],
-//         ),
-//         child: BarStack()
-//       ),
-      
-//     );
-//   }
-// }
-
- 
