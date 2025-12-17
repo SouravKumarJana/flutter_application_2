@@ -6,7 +6,7 @@ class HomeScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white10,
+      backgroundColor: Colors.white,
       appBar: AppBar(title: Text('Home Screen'),centerTitle: true,),
       bottomNavigationBar: Container(
         padding: EdgeInsets.all(6),
@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget{
           boxShadow: [
             BoxShadow(
               color: Colors.black26,
-              blurRadius: 3
+              blurRadius: 15
             )
           ],
         ),
