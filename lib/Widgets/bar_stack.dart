@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../bar_elememt.dart';
-import '../screen1.dart';
-import '../secondScreen.dart';
+import 'bar_elememt.dart';
+import 'screen1.dart';
+import 'secondScreen.dart';
 import 'text_style.dart';
 class BarStack extends StatelessWidget{
   const BarStack({super.key});
